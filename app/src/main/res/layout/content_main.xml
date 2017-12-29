@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="15dp"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+    <com.example.zhanshuyong.textviewlinearlayout.TextViewLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:clipChildren="false"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="辅导费顿饭圣诞fjshdkfhajdhfsdjhfjsd 节会发生的返回的交话费谁都会发生电风扇顿饭df"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/w115_file_information_rename" />
+
+    </com.example.zhanshuyong.textviewlinearlayout.TextViewLinearLayout>
+
+    <com.example.zhanshuyong.textviewlinearlayout.TextViewLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:clipChildren="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="辅导费顿饭圣诞节会发生的返回的交话费谁都会发生电风扇顿饭df"
+            android:textSize="31sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/w115_file_information_rename" />
+
+    </com.example.zhanshuyong.textviewlinearlayout.TextViewLinearLayout>
+
+    <com.example.zhanshuyong.textviewlinearlayout.TextViewLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:clipChildren="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="辅导费顿饭话费谁都会发风扇顿饭圣诞节返回"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/w115_file_information_rename" />
+
+    </com.example.zhanshuyong.textviewlinearlayout.TextViewLinearLayout>
+
+
+</LinearLayout>
