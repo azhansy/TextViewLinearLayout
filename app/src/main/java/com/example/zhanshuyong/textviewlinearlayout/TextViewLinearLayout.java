@@ -48,6 +48,9 @@ public class TextViewLinearLayout extends LinearLayout {
         super.onFinishInflate();
         textView = (TextView) getChildAt(0);
         child2 = getChildAt(1);
+        LayoutParams textViewlp = (LayoutParams) textView.getLayoutParams();
+        textViewlp.gravity = Gravity.CENTER_VERTICAL;
+        textView.setLayoutParams(textViewlp);
 
     }
 
@@ -68,32 +71,23 @@ public class TextViewLinearLayout extends LinearLayout {
         Log.d("azhansy", "onSizeChanged" + " ----------" + "  child2Height: " + child2Height + "  textViewHeight:" + textViewHeight);
 
         int lineCount = textView.getLineCount();
-
-
-//        Rect rect = new Rect();
-//        textView.getPaint().getTextBounds("aa", 0, "aa".length(), rect);
-//
-//        Log.d("azhansy", "rect.height(): " + rect.height() + "   ---   " + textViewHeight / lineCount);
-
+        LayoutParams olp = (LayoutParams) child2.getLayoutParams();
         if (lineCount > 1) {
-//            int height = textView.getHeight();
-//            int top = textView.getLineHeight();
-//            setGravity(Gravity.START | Gravity.TOP);
+            olp.gravity = -1;
 
             if (child2Height > textViewHeight / lineCount) {
 
             } else {
-                LayoutParams olp = (LayoutParams) child2.getLayoutParams();
                 //这里计算还不太准确，
-                int top = (int) (textViewHeight / lineCount / 2 - child2Height / 2 + textView.getBaseline() / 8 - 2);
+                int top = (int) (textViewHeight / lineCount / 2 - child2Height / 2 + textView.getBaseline() / 8);
                 olp.setMargins(olp.leftMargin, top, olp.rightMargin, olp.bottomMargin);
-                child2.setLayoutParams(olp);
                 Log.d("azhansy", "count: " + lineCount + "     top: " + top + "     getBaseline: " + textView.getBaseline());
             }
-
+            child2.setLayoutParams(olp);
 
         } else {
-//            setGravity(Gravity.CENTER_VERTICAL);
+            olp.gravity = Gravity.CENTER_VERTICAL;
+            child2.setLayoutParams(olp);
         }
     }
 
