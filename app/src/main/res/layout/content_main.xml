@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="15dp"
     android:background="@color/colorAccent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -15,7 +14,6 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:clipChildren="false"
-        android:paddingBottom="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
@@ -62,6 +60,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:clipChildren="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="辅导费顿饭话费谁都会发风扇顿饭圣诞节返回"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/w115_file_information_rename" />
+
+    </com.example.zhanshuyong.textviewlinearlayout.TextViewLinearLayout>
+    <com.example.zhanshuyong.textviewlinearlayout.TextViewLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:clipChildren="false"
         android:paddingLeft="10dp"

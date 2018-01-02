@@ -2,6 +2,7 @@ package com.example.zhanshuyong.textviewlinearlayout;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -68,16 +69,23 @@ public class TextViewLinearLayout extends LinearLayout {
 
         int lineCount = textView.getLineCount();
 
+
+//        Rect rect = new Rect();
+//        textView.getPaint().getTextBounds("aa", 0, "aa".length(), rect);
+//
+//        Log.d("azhansy", "rect.height(): " + rect.height() + "   ---   " + textViewHeight / lineCount);
+
         if (lineCount > 1) {
 //            int height = textView.getHeight();
 //            int top = textView.getLineHeight();
+//            setGravity(Gravity.START | Gravity.TOP);
 
             if (child2Height > textViewHeight / lineCount) {
 
             } else {
                 LayoutParams olp = (LayoutParams) child2.getLayoutParams();
                 //这里计算还不太准确，
-                int top = (int) (textViewHeight / lineCount / 2 - child2Height / 2 + textView.getBaseline() / 8 -2);
+                int top = (int) (textViewHeight / lineCount / 2 - child2Height / 2 + textView.getBaseline() / 8 - 2);
                 olp.setMargins(olp.leftMargin, top, olp.rightMargin, olp.bottomMargin);
                 child2.setLayoutParams(olp);
                 Log.d("azhansy", "count: " + lineCount + "     top: " + top + "     getBaseline: " + textView.getBaseline());
@@ -85,7 +93,7 @@ public class TextViewLinearLayout extends LinearLayout {
 
 
         } else {
-            setGravity(Gravity.CENTER_VERTICAL);
+//            setGravity(Gravity.CENTER_VERTICAL);
         }
     }
 
